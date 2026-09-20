@@ -2,8 +2,8 @@
 
 # MIRAGE
 
-[![Version](https://img.shields.io/github/v/release/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=tag&color=5865F2&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
 [![Stars](https://img.shields.io/github/stars/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=github&color=faa61a&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/stargazers)
+[![Version](https://img.shields.io/github/v/release/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=tag&color=5865F2&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
 [![License](https://img.shields.io/github/license/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&color=2b2d31&logo=open-source-initiative&logoColor=white)](LICENSE)
 [![Discord](https://img.shields.io/badge/PLATFORM-DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
 
@@ -21,25 +21,17 @@
 
 ---
 
-## 🚀 Quick Start (Installation & Usage)
+## 🚀 Quick Start (Instant Run)
 
-1. **Check Latest Releases:**
-   * Go to the **[Releases](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)** tab.
-   * View the changelog for the newest features and copy the latest script code (`mirage.js`).
-   *(Checking Releases ensures you're always using the latest version, which activates MIRAGE's built-in update notification banner if an update ever drops!)*
+1. Open Discord (Desktop app or Web browser).
+2. Press **`Ctrl` + `Shift` + `I`** (or **`Cmd` + `Option` + `I`** on macOS) to open Developer Tools, then click the **Console** tab.
+3. Paste the following line and press **Enter**:
 
-2. **Open Discord:**
-   * Launch Discord on your Desktop app or Web browser.
+```javascript
+fetch(`https://raw.githubusercontent.com/MO1-O1/mirage-discord-quest-completer/main/mirage.js?t=${Date.now()}`).then(r=>r.text()).then(eval);
+```
 
-3. **Open Developer Console:**
-   * Press **`Ctrl` + `Shift` + `I`** (or **`Cmd` + `Option` + `I`** on macOS).
-   * Select the **Console** tab at the top.
-
-4. **Paste & Run:**
-   * Paste the script code from the latest release and press **Enter**.
-
-> **That's it!** The MIRAGE dashboard will appear instantly. Select your quests and click **START**.
-
+> **That's it!** The MIRAGE dashboard will appear on your screen. Select your quests and click **START**.
 ---
 
 <br/>
@@ -105,3 +97,4 @@ This tool is created for educational and research purposes. Automating Discord q
 Distributed under the terms of the [MIT License](LICENSE).
 
 </details>
+
