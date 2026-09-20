@@ -1,6 +1,6 @@
 <div align="center">
 
-# MIRAGE
+# <img width="1280" height="640" alt="social_preview" src="https://github.com/user-attachments/assets/d6f755f7-33a3-4115-9509-32ff46f2d6e8" />
 
 [![Stars](https://img.shields.io/github/stars/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=github&color=faa61a&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/stargazers)
 [![Version](https://img.shields.io/github/v/release/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=tag&color=5865F2&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
