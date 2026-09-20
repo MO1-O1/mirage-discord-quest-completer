@@ -4,7 +4,6 @@
 
 [![Stars](https://img.shields.io/github/stars/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=github&color=faa61a&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/stargazers)
 [![Version](https://img.shields.io/github/v/release/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=tag&color=5865F2&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
-[![Downloads](https://img.shields.io/github/downloads/MO1-O1/mirage-discord-quest-completer/total?style=for-the-badge&logo=githubactions&color=3BA55C&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
 [![License](https://img.shields.io/github/license/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&color=2b2d31&logo=open-source-initiative&logoColor=white)](LICENSE)
 [![Discord](https://img.shields.io/badge/PLATFORM-DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
 
