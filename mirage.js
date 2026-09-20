@@ -7,7 +7,7 @@
     /* ── 1. Configuration & Constants ── */
     const CONFIG = Object.freeze({
         NAME: "MIRAGE",
-        VERSION: "v5.7.0",
+        VERSION: "v5.7.1",
         REPO: "MO1-O1/mirage-discord-quest-completer",
         GITHUB_URL: "https://github.com/MO1-O1/mirage-discord-quest-completer",
         THEME: "#5865F2",
