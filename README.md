@@ -1,103 +1,102 @@
 <div align="center">
 
-# ⚡ MIRAGE — Discord Quest Completer
+# MIRAGE
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-v5.7.1-5865F2.svg)](https://github.com/)
-[![Platform](https://img.shields.io/badge/Platform-Discord%20Desktop%20%7C%20Web-green.svg)](https://discord.com)
-[![Vencord](https://img.shields.io/badge/Vencord-Supported-5865f2.svg)](https://vencord.dev)
-[![Language](https://img.shields.io/badge/Language-English%20%7C%20العربية-faa61a.svg)](#arabic)
-
-**A lightweight, automated quest completer for Discord with Smart Quest Priority, Interruption Recovery, and Vencord Activity Bypass.**
-
-[English](#english) • [العربية](#arabic)
-
----
+[![Stars](https://img.shields.io/github/stars/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=github&color=faa61a&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/stargazers)
+[![Version](https://img.shields.io/github/v/release/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&logo=tag&color=5865F2&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
+[![Downloads](https://img.shields.io/github/downloads/MO1-O1/mirage-discord-quest-completer/total?style=for-the-badge&logo=githubactions&color=3BA55C&logoColor=white)](https://github.com/MO1-O1/mirage-discord-quest-completer/releases)
+[![License](https://img.shields.io/github/license/MO1-O1/mirage-discord-quest-completer?style=for-the-badge&color=2b2d31&logo=open-source-initiative&logoColor=white)](LICENSE)
+[![Discord](https://img.shields.io/badge/PLATFORM-DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com)
 
 </div>
 
-<a name="english"></a>
-## 🇬🇧 English Documentation
+---
 
-### 🌟 Features
+## ⚡ What is MIRAGE?
 
-* **Smart Quest Priority:** Automatically prioritizes quests based on urgency (expiring soonest), highest rewards (Orbs, Avatar decorations), and shortest completion time.
-* **Instant Claiming:** Completed-but-unclaimed quests are prioritized and claimed immediately before long tasks begin.
-* **Resume After Interruption:** Automatically tracks progress and safely resumes unfinished quests if the tab or client refreshes or disconnects.
-* **Pre-flight Validation:** Verifies task schema, platform compatibility, and expiration before running to eliminate false triggers or broken tasks.
-* **All Task Types Supported:**
-  * 🎬 **Video Quests (`WATCH_VIDEO`)** — Automated progress pacing with natural human delays.
-  * 🎮 **Desktop Games (`PLAY_ON_DESKTOP`)** — Background game process emulation without launching heavy games.
-  * 🎙️ **Voice Activities (`PLAY_ACTIVITY`)** — Voice channel activity emulation.
-  * 🏆 **Activity Achievements (`ACHIEVEMENT_IN_ACTIVITY`)** — Full bypass support via Vencord (`OrionQuests` / `MirageQuests`).
-* **Bilingual UI:** Clean floating dashboard with seamless 1-click English and Arabic toggling.
-* **Anti-Detection Options:** Stealth mode (hide activity from friends), randomized delay gaps, and wake lock prevention.
+**MIRAGE** is a lightweight, background tool that automatically completes Discord Quests and claims your rewards (Orbs, Avatar Decorations, In-Game items) in minutes.
+
+* **No game downloads:** Completes PC game quests without installing or opening the game.
+* **No waiting around:** Completes 15-minute video, voice, and streaming tasks automatically.
+* **Instant rewards:** Automatically enrolls in quests and redeems finished rewards with zero manual effort.
 
 ---
 
-### 🚀 Quick Start (One-Liner)
+## 🚀 Quick Start (3 Steps)
 
 1. Open Discord (Desktop app or Web browser).
-2. Press `Ctrl` + `Shift` + `I` (or `Cmd` + `Option` + `I` on Mac) to open DevTools, then select the **Console** tab.
-3. Paste the following snippet and press **Enter**:
+2. Press **`Ctrl` + `Shift` + `I`** (or `Cmd` + `Option` + `I` on Mac) to open DevTools, then click the **Console** tab.
+3. Paste the following line and press **Enter**:
 
 ```javascript
-fetch("https://raw.githubusercontent.com/YOUR_USERNAME/mirage-discord-quest-completer/main/mirage.js").then(r=>r.text()).then(eval);
+fetch("https://raw.githubusercontent.com/MO1-O1/mirage-discord-quest-completer/main/mirage.js").then(r=>r.text()).then(eval);
 ```
 
-*(Or simply copy the contents of `mirage.js` and paste it directly into the Console).*
-
-4. The MIRAGE dashboard will open. Select your desired quests and click **START**.
+> **That's it!** The MIRAGE dashboard will appear on your screen. Select your quests and click **START**.
 
 ---
 
-### ⚙️ Vencord Support (For Achievement Quests)
+<br/>
 
-If you have Vencord installed with the helper module (`OrionQuests` or `MirageQuests`), MIRAGE automatically detects it, unlocks the Achievement checkbox, and bypasses the activity quest on `discordsays.com` without needing to open the game!
+<details open>
+<summary><b>🛠️ Advanced Information & Technical Details (Click to Expand / Collapse)</b></summary>
+
+<br/>
+
+### 📋 Supported Quest Matrix
+
+| Quest Type | Internal Discord Key | Status | How It Works |
+| :--- | :--- | :---: | :--- |
+| **Video Playback** | `WATCH_VIDEO` | `STABLE` | Simulates natural human watch progress with randomized intervals |
+| **Desktop Games** | `PLAY_ON_DESKTOP` | `STABLE` | Injects running process metadata into Discord's internal store |
+| **Voice Activity** | `PLAY_ACTIVITY` | `STABLE` | Sends authenticated voice channel WebRTC heartbeats |
+| **Activity Achievements** | `ACHIEVEMENT_IN_ACTIVITY` | `BYPASS` | Bypasses renderer CSP via Vencord Electron native IPC |
+| **In-Game Achievements** | `ACHIEVEMENT_IN_GAME` | `SKIPPED` | Safely skipped (requires physical retail game client) |
+| **Console Exclusives** | `PLAY_ON_XBOX`, `PLAY_ON_PLAYSTATION` | `SKIPPED` | Safely skipped (requires linked console hardware) |
+
+---
+
+### ⚙️ Engine Features
+
+* **Smart Quest Priority:** Evaluates expiration urgency, reward yield, and completion time to automatically finish the most valuable and quickest quests first.
+* **Instant Claiming:** Quests that are already finished but unclaimed are detected and claimed immediately before long tasks begin.
+* **Resume After Interruption:** Automatically tracks progress; if Discord restarts, the page refreshes, or your internet drops, tasks resume from the exact last saved progress.
+* **Pre-Flight Validation:** Inspects task schemas and platform capabilities before running to prevent errors or broken requests.
+* **History & Telemetry:** Built-in tracking of completed, claimed, failed, and skipped tasks with session metrics.
+
+---
+
+### 🎛️ Settings & Customization
+
+| Setting | Default | Description |
+| :--- | :---: | :--- |
+| **Auto-Enroll** | `Enabled` | Automatically joins available quests upon detection |
+| **Auto-Claim** | `Enabled` | Redeems rewards immediately upon reaching 100% |
+| **Speed Multiplier** | `1x` | Adjusts video progression speed (1x, 1.5x, 2x, 3x) |
+| **Stealth Mode** | `Disabled` | Hides your playing status from friends while running tasks |
+| **Anti-Detection Delay** | `Disabled` | Adds random 1–30 minute pauses between scan cycles |
+| **Prevent System Sleep** | `Enabled` | Keeps your PC awake while tasks are running |
+
+---
+
+### 🧩 Vencord Bypass (For Activity Achievements)
+
+For automated completion of `ACHIEVEMENT_IN_ACTIVITY` quests:
+* Requires Discord Desktop with **Vencord** installed.
+* MIRAGE automatically detects the companion helper (`OrionQuests` or `MirageQuests`) and bypasses the `discordsays.com` domain block.
+* If the companion helper is not installed, the quest is marked with a manual note to launch it in Discord for a few seconds.
 
 ---
 
 ### ⚠️ Disclaimer
 
-This project is for educational purposes only. Automated interaction with Discord APIs may violate Discord's Terms of Service. Use at your own discretion.
+This tool is created for educational and research purposes. Automating Discord quests may violate Discord's Terms of Service. Use at your own discretion.
 
 ---
 
-<a name="arabic"></a>
-## 🇸🇦 الشرح باللغة العربية
+### 📄 License
 
-### 🌟 مميزات الأداة
+Distributed under the terms of the [MIT License](LICENSE).
 
-* **نظام الأولوية الذكي (Smart Priority):** يرتب المهام تلقائياً حسب قرب موعد الانتهاء، وقيمة الجوائز (أورب وزينة الأفاتار)، والوقت الأقل للإنجاز.
-* **مطالبة فورية:** المهام المكتملة مسبقاً يتم المطالبة بجوائزها فوراً قبل بدء المهام الطويلة.
-* **الاستئناف بعد الانقطاع:** يحفظ التقدم تلقائياً؛ إذا تم تحديث الصفحة أو أُغلق ديسكورد، يكمل السكربت من آخر نقطة تقدم بدلاً من البدء من الصفر.
-* **فحص مسبق ودقيق:** يتحقق من صلاحية المهمة وتوفر المعالج البرمجي المناسب قبل بدء التشغيل لتفادي الأخطاء.
-* **دعم جميع أنواع مهام ديسكورد:**
-  * 🎬 **مهام الفيديو (`WATCH_VIDEO`)**
-  * 🎮 **ألعاب الكمبيوتر (`PLAY_ON_DESKTOP`)** بدون الحاجة لتثبيت أو فتح اللعبة.
-  * 🎙️ **الأنشطة الصوتية (`PLAY_ACTIVITY`)**
-  * 🏆 **إنجازات الأنشطة (`ACHIEVEMENT_IN_ACTIVITY`)** عبر دعم Vencord المدمج.
-* **واجهة عربية بالكامل:** لوحة تحكم عائمة تدعم اللغة العربية والإنجليزية مع الوضع الليلي المتناسق مع ديسكورد.
-* **حماية وتخفي:** وضع التخفي لإخفاء النشاط عن الأصدقاء، فواصل زمنية عشوائية لتجنب الرصد، ومنع وضع السكون للشاشة.
+</details>
 
----
-
-### 🚀 طريقة التشغيل السريعة
-
-1. افتح تطبيق ديسكورد على الكمبيوتر (أو عبر المتصفح).
-2. اضغط من لوحة المفاتيح على `Ctrl` + `Shift` + `I` لفتح أدوات المطورين، واختر تبويب **Console**.
-3. الصق السطر التالي واضغط **Enter**:
-
-```javascript
-fetch("https://raw.githubusercontent.com/YOUR_USERNAME/mirage-discord-quest-completer/main/mirage.js").then(r=>r.text()).then(eval);
-```
-
-*(أو انسخ كود ملف `mirage.js` بالكامل والصقه في الكونسول مباشرة).*
-
-4. ستفتح لك لوحة تحكم MIRAGE العائمة، حدد المهام المطلوبة ثم اضغط **START**.
-
----
-
-### 📄 الترخيص (License)
-
-هذا المشروع مرخص تحت رخصة **[MIT License](LICENSE)** المفتوحة والمجانية بالكامل.
